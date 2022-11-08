@@ -3,26 +3,30 @@ import { Modal, StyleSheet, Text, Pressable, View, Image } from "react-native";/
 import Warning from '../Warning.png';
 
 const CustomModal = () => {
+// const [... , ...] = useState(false); Se crea un booleano modalvisible para ir actualizando el estado del modal con el hook useState cada vez que apretamos el boton
 
- const [modalVisible, setModalVisible] = useState(false);// Se crea un booleano modalvisible para ir actualizando el estado del modal con el hook useState cada vez que apretamos el boton
   return (
     <View style={styles.centeredView}> 
 
       <Modal
-        animationType="slide" //Prop que controla la animacion del modal slide, fade o none
-        transparent={true} //Prop que si esta true entrega un fondo transparente al abrir el modal y false un fondo blanco.
-        visible={modalVisible} //Prop que determina cuando el modal esta visible
+      // animationType="" Prop que controla la animacion del modal slide, fade o none
+
+      //transparent={bool} Prop que si esta true entrega un fondo transparente al abrir el modal y false un fondo blanco.
+
+      // visible={const} Prop que determina cuando el modal esta visible 
+      
       >
         <View style={styles.centeredView}>
         <View style={styles.modalView}> 
-          <Image style={styles.image} source={Warning}/>
+          <Image style={styles.image}/>
             <Text style={styles.titleModal}>Este es un modal</Text>
           
             <Pressable
               style={[styles.button]}
-              onPress={() => setModalVisible(!modalVisible)}
+              //onPress
+              
             >
-              <Text style={styles.textStyle}>ESCONDER MODAL</Text>
+              <Text style={styles.textStyle}>ESCONDER</Text>
             </Pressable>
 
           </View>
@@ -31,9 +35,10 @@ const CustomModal = () => {
       
       <Pressable
         style={[styles.button]}
-        onPress={() => setModalVisible(true)}
+         //onPress
+
       >
-        <Text style={styles.textStyle}>ABRIR MODAL</Text>
+        <Text style={styles.textStyle}>ABRIR</Text>
       </Pressable>
 
       
