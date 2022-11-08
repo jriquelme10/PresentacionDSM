@@ -8,7 +8,7 @@ const CustomModal = () => {
   return (
     <View style={styles.centeredView}> 
 
-      <Modal
+      <Modal 
       // animationType="" Prop que controla la animacion del modal slide, fade o none
 
       //transparent={bool} Prop que si esta true entrega un fondo transparente al abrir el modal y false un fondo blanco.
@@ -19,7 +19,7 @@ const CustomModal = () => {
         <View style={styles.centeredView}>
         <View style={styles.modalView}> 
           <Image style={styles.image}/>
-            <Text style={styles.titleModal}>Este es un modal</Text>
+            <Text style={styles.titleModal}></Text>
           
             <Pressable
               style={[styles.button]}
