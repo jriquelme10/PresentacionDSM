@@ -1,21 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import CustomModal from './componentes/CustomModal';
+import React, { useState } from "react";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import CustomModal from "./componentes/CustomModal";
+import CustomIcon from "./CustomIcon.js";
 
+const App = () => {
 
-export default function App() {
   return (
-    <View style={styles.container}>
-    <CustomModal/>
+    <View>
+     <CustomIcon/> 
     </View>
+    
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
